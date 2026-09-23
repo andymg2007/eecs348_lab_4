@@ -6,11 +6,18 @@ int main() {
 
     while (1) {
         printf("Enter the NFL score (Enter 1 to stop): ");
-        scanf("%d", &score);
+        int n = scanf("%d", &score);
+        if (n != 1) {
+            printf("Invalid input\n");
+            while (getchar() != '\n') {
+                continue;
+            }
+            continue;
+        }
         if (score == 1) break;
         if (score < 0) {
             printf("Invalid input.\n");
-            break;
+            continue;
         }
         printf("Possible combinations of scoring plays if a team's score is %d:\n", score);
 
