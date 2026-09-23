@@ -9,9 +9,7 @@ int main() {
         int n = scanf("%d", &score);
         if (n != 1) {
             printf("Invalid input\n");
-            while (getchar() != '\n') {
-                continue;
-            }
+            while (getchar() != '\n');
             continue;
         }
         if (score == 1) break;
