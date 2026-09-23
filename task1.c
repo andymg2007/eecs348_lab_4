@@ -8,7 +8,10 @@ int main() {
         printf("Enter the NFL score (Enter 1 to stop): ");
         scanf("%d", &score);
         if (score == 1) break;
-
+        if (score < 0) {
+            printf("Invalid input.\n");
+            break;
+        }
         printf("Possible combinations of scoring plays if a team's score is %d:\n", score);
 
         for (int n8 = 0; n8 * 8 <= score; n8++) {

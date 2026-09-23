@@ -26,7 +26,8 @@ int main() {
         else if (scale == 'K') {
             conv_temp = (temp - 273.15) * 9/5 + 32;
         } else {
-            printf("Invalid input.");
+            printf("Invalid input.\n");
+            return 0;
         }
 
     }
@@ -38,7 +39,8 @@ int main() {
         } else if (scale == 'K') {
             conv_temp = temp - 273.15;
         } else {
-            printf("Invalid input.");
+            printf("Invalid input.\n");
+            return 0;
         }    
     }
     else if (convert == 'K') {
@@ -49,10 +51,12 @@ int main() {
         } else if (scale == 'K') {
             conv_temp = temp;
         } else {
-            printf("Invalid input.");
+            printf("Invalid input.\n");
+            return 0;
         }    
     } else {
-        printf("Invalid input.");
+        printf("Invalid input.\n");
+        return 0;
     }
     printf("Converted temperature: %lf %c\n", conv_temp, convert);
     if (scale == 'C') {
